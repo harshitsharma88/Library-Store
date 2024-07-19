@@ -41,7 +41,6 @@ async function authenticate(req,res,next){
         res.status(500).json('Authentication Error')
         
     }
-
 }
 
 module.exports= authenticate;

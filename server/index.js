@@ -17,10 +17,15 @@ const dbConn = require('./database-configuration/dbConn');
 // Configuring all the Routes 
 const homeRoute = require('./routes/login_home_Route');
 const adminRoute = require('./routes/adminRoutes');
+const readerRoute = require('./routes/readerRoute');
+const passwordRoute = require('./routes/passwordRoute');
 
 // Route all requests
 app.use('/',homeRoute);
+app.use('/reader',readerRoute);
 app.use('/admin',adminRoute);
+app.use('/password',passwordRoute);
+
 
 dbConn()
 .then(()=>{
